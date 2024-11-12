@@ -1,0 +1,56 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f3e8; /* Fondo claro, verde pálido */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f9f5; /* Fondo blanco con un toque verde */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Encabezados */
+h1 {
+    font-size: 2em;
+    color: #2d5a2d; /* Verde oscuro */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #4a784a; /* Verde más suave para diferenciar */
+    border-bottom: 2px solid #d2e0d2;
+    padding-bottom: 8px;
+    margin-top: 30px;
+}
+
+/* Estilos para los párrafos */
+p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin: 15px 0;
+}
+
+/* Tooltip general */
+.tooltip {
+    font-weight: bold;
+    color: #2d5a2d; /* Verde oscuro */
+    text-decoration: underline dotted;
+}
+
+.tooltip .tooltiptext {
+    background-color: #4a784a; /* Fondo verde oscuro */
+    padding: 8px;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+    font-size: 0.9em;
+}
