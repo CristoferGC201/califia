@@ -8,7 +8,7 @@
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biología - Enciclopedia Educativa</title>
+    <title>Califia - Enciclopedia Educativa</title>
     <link rel="stylesheet" href="inicio.css"> <!-- Enlace al archivo CSS externo que contiene los estilos de la página -->
 
 </head>  
@@ -26,6 +26,7 @@
                     </a>
                 </div>
                 <ul class="nav-links">
+                    
                     <li><a href="index.php">Índice</a></li>
                     <li><a href="ciencia.php">Ciencias Naturales</a></li>
                     <li><a href="literatura.php">Lenguaje</a></li>
@@ -33,7 +34,7 @@
                     <li><a href="biologia.php">Biología</a></li>
                     <li><a href="Historia.php">Historia</a></li>
                     <li><a href="glosario.php">Glosario</a></li>
-                    <li><a href="Preguntas.php">Preguntas</a></li>
+                    <li><a href="Preguntas.php">Contactanos</a></li>
                     <li><a href="login.php" class="btn btn-primary">Iniciar Sesión</a></li> <!-- Botón para iniciar sesión -->
                 </ul>
             </nav>
