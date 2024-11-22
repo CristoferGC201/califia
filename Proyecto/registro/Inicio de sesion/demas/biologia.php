@@ -21,13 +21,42 @@
             <p>Los cloroplastos son exclusivos de células vegetales y realizan la fotosíntesis, generando oxígeno y energía química.</p>
             <p>La membrana celular regula el intercambio de sustancias entre la célula y el entorno, manteniendo el equilibrio celular.</p>
             <p>El citoesqueleto proporciona soporte estructural, permitiendo la forma y el movimiento celular.</p>
+            
+                         <!-- Botón de descarga del pdf-->
+                         <div style="margin: 20px 0;">
+                <a href="downloads/Partes_de_una_celula.pdf" class="btn btn-primary" download style="padding: 5px 15px; font-size: 12px; background-color: #007bff; color: white; border-radius: 5px; text-decoration: none;">
+                    Descargar partes de una celula (PDF)
+                </a>
 
-            <!-- Lista de enlaces de video educativos -->
             <h4>Videos Educativos sobre Células:</h4>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=aoj9oTvVJ8o">La célula para niños - Ciencia para niños</a></li>
-                <li><a href="https://www.youtube.com/watch?v=tR3Iq2voxUU">La célula y sus partes | Vídeos educativos para niños</a></li>
-            </ul>
+            <!-- Aquí agregamos los videos de forma accesible -->
+            <section class="videos" style="margin-top: 40px; padding: 20px; background-color: #f9f9f9;">
+                <div class="container">
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                        <!-- Video 1 -->
+                        <div style="flex: 1; min-width: 300px; max-width: 45%;">
+                            <iframe width="100%" height="250" 
+                                    src="https://www.youtube.com/embed/aoj9oTvVJ8o?rel=0&cc_load_policy=1" 
+                                    title="La célula para niños - Ciencia para niños" 
+                                    frameborder="0" allowfullscreen 
+                                    aria-label="Video educativo sobre la célula para niños, explicando sus partes y funciones.">
+                            </iframe>
+                            <p style="text-align: center;">La célula para niños - Ciencia para niños</p>
+                        </div>
+                        
+                        <!-- Video 2 -->
+                        <div style="flex: 1; min-width: 300px; max-width: 45%;">
+                            <iframe width="100%" height="250" 
+                                    src="https://www.youtube.com/embed/tR3Iq2voxUU?rel=0&cc_load_policy=1" 
+                                    title="La célula y sus partes | Vídeos educativos para niños" 
+                                    frameborder="0" allowfullscreen 
+                                    aria-label="Video educativo sobre la célula y sus partes, dirigido a niños.">
+                            </iframe>
+                            <p style="text-align: center;">La célula y sus partes | Vídeos educativos para niños</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- Enlace al examen de Biología -->
             <a href="Examenes/Biologia_quiz.html" class="btn btn-secondary">Examen</a>
@@ -36,5 +65,3 @@
     <?php include __DIR__ . '/Includes/footer.php'; ?>
 </body>
 </html>
-
-

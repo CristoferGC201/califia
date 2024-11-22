@@ -39,16 +39,54 @@
             <p><strong>Ejemplos de Ejercicios Sencillos:</strong></p>
             <p><strong>Problema 1:</strong> Tienes 2 pelotas y te dan 3 más. ¿Cuántas pelotas tienes en total? Respuesta: 2 + 3 = 5 pelotas.</p>
             <p><strong>Problema 2:</strong> Hay 4 gatos en el parque, y llegan 2 más. ¿Cuántos gatos hay ahora? Respuesta: 4 + 2 = 6 gatos.</p>
+                                     <!-- Botón de descarga del pdf-->
+                                     <div style="margin: 20px 0;">
+                <a href="downloads/Cuadernillo_suma_y_restas.pdf" class="btn btn-primary" download style="padding: 5px 15px; font-size: 12px; background-color: #007bff; color: white; border-radius: 5px; text-decoration: none;">
+                    Descargar Ejercicioa suma y resta (PDF)
+                </a>
 
             <p><strong>Actividad Final:</strong></p>
             <p>Dale varios objetos y haz preguntas como: "¿Cuántos tienes si añades uno más?" o "¿Cuántos te quedan si quitas uno?" Esto también ayuda a introducir la resta.</p>
 
             <h4>Videos Educativos sobre Sumas:</h4>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=TAiCuAm7o_8">¿Qué es la Suma? Explicación Fácil para Niños</a></li>
-                <li><a href="https://www.youtube.com/watch?v=F9H1VFBu9cQ">Canción para Aprender a Sumar</a></li>
-                <li><a href="https://www.youtube.com/watch?v=koVE1U-wiMw">Agregando Agregando vamos Sumando</a></li>
-            </ul>
+            <section class="videos" style="margin-top: 40px; padding: 20px; background-color: #f9f9f9;">
+                <div class="container">
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                        <!-- Video 1 -->
+                        <div style="flex: 1; min-width: 300px; max-width: 45%;">
+                            <iframe width="100%" height="250" 
+                                    src="https://www.youtube.com/embed/TAiCuAm7o_8?rel=0&cc_load_policy=1" 
+                                    title="¿Qué es la Suma? Explicación Fácil para Niños" 
+                                    frameborder="0" allowfullscreen 
+                                    aria-label="Video educativo explicando el concepto de la suma para niños">
+                            </iframe>
+                            <p style="text-align: center;">¿Qué es la Suma? Explicación Fácil para Niños</p>
+                        </div>
+                        
+                        <!-- Video 2 -->
+                        <div style="flex: 1; min-width: 300px; max-width: 45%;">
+                            <iframe width="100%" height="250" 
+                                    src="https://www.youtube.com/embed/F9H1VFBu9cQ?rel=0&cc_load_policy=1" 
+                                    title="Canción para Aprender a Sumar" 
+                                    frameborder="0" allowfullscreen 
+                                    aria-label="Canción educativa para aprender a sumar, dirigida a niños">
+                            </iframe>
+                            <p style="text-align: center;">Canción para Aprender a Sumar</p>
+                        </div>
+
+                        <!-- Video 3 -->
+                        <div style="flex: 1; min-width: 300px; max-width: 45%;">
+                            <iframe width="100%" height="250" 
+                                    src="https://www.youtube.com/embed/koVE1U-wiMw?rel=0&cc_load_policy=1" 
+                                    title="Agregando Agregando vamos Sumando" 
+                                    frameborder="0" allowfullscreen 
+                                    aria-label="Video educativo con canción sobre sumar">
+                            </iframe>
+                            <p style="text-align: center;">Agregando Agregando vamos Sumando</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <a href="Examenes/Matematicas/Sumas_quiz.html" class="btn btn-secondary">Examen</a>
         </div>
@@ -56,4 +94,3 @@
     <?php include __DIR__ . '/Includes/footer.php'; ?>
 </body>
 </html>
-

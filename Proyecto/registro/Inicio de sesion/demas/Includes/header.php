@@ -32,6 +32,8 @@
                     <li><a href="matematicas.php">Matemáticas/Geometría</a></li>
                     <li><a href="biologia.php">Biología</a></li>
                     <li><a href="Historia.php">Historia</a></li>
+                    <li><a href="glosario.php">Glosario</a></li>
+                    <li><a href="Preguntas.php">Preguntas</a></li>
                     <li><a href="login.php" class="btn btn-primary">Iniciar Sesión</a></li> <!-- Botón para iniciar sesión -->
                 </ul>
             </nav>

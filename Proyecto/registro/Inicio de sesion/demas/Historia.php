@@ -27,12 +27,39 @@
             <p>
                 Francia, como el resto de Europa, jamás volvería a ser la misma tras estos eventos. Las repercusiones se sintieron tanto dentro como fuera de sus fronteras, y el ejemplo francés se convirtió en un faro para otros movimientos que buscaban desafiar el poder establecido.
             </p>
-            <h4>Videos Educativos sobre Revolucion Francesa:</h4>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=8qRZcXIODNU">Parte 1: La Revolución Francesa - OverSimplified</a></li>
-                <li><a href="https://www.khanacademy.org/humanities/world-history/1600s-1800s/french-revolution-tutorial/v/french-revolution-part-2">Khan Academy - Revolución Francesa Parte 2</a></li>
-            </ul>
-            <a href="Examenes/arte_quiz.html" class="btn btn-secondary">Examen</a>
+
+            <h4>Videos Educativos sobre Revolución Francesa:</h4>
+            <!-- Agregar los videos de manera accesible -->
+            <section class="videos" style="margin-top: 40px; padding: 20px; background-color: #f9f9f9;">
+                <div class="container">
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                        <!-- Video 1 -->
+                        <div style="flex: 1; min-width: 300px; max-width: 45%;">
+                            <iframe width="100%" height="250" 
+                                    src="https://www.youtube.com/embed/8qRZcXIODNU?rel=0&cc_load_policy=1" 
+                                    title="Parte 1: La Revolución Francesa - OverSimplified" 
+                                    frameborder="0" allowfullscreen 
+                                    aria-label="Video educativo sobre la Revolución Francesa, explicado de forma simplificada.">
+                            </iframe>
+                            <p style="text-align: center;">Parte 1: La Revolución Francesa - OverSimplified</p>
+                        </div>
+                        
+                        <!-- Video 2 -->
+                        <div style="flex: 1; min-width: 300px; max-width: 45%;">
+                            <iframe width="100%" height="250" 
+                                    src="https://www.youtube.com/embed/3XmZnfDvvu4" 
+                                    title="Khan Academy - Revolución Francesa Parte 2" 
+                                    frameborder="0" allowfullscreen 
+                                    aria-label="Video educativo sobre la Revolución Francesa, explicado por Khan Academy.">
+                            </iframe>
+                            <p style="text-align: center;">Revolución Francesa Parte 2</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Enlace al examen de Historia -->
+            <a href="Examenes/Historia_quiz.html" class="btn btn-secondary" role="button" aria-label="Ir al examen de Historia">Examen</a>
         </div>
     </section>
 
