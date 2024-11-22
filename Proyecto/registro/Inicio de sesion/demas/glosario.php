@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glosario Educativo</title>
-    <link rel="stylesheet" href="StyleQ.css">
-    <style>
+<?php include __DIR__ . '/Includes/header.php'; ?>
+<link rel="stylesheet" href="StyleQ.css">
+<style>
         /* Estilo para los tooltips */
-        .tooltip {
+       .tooltip {
             position: relative;
             display: inline-block;
             cursor: pointer;
@@ -32,10 +27,10 @@
         }
 
         /* Mostrar el tooltip al pasar el cursor */
-        .tooltip:hover .tooltiptext {
+       .tooltip:hover .tooltiptext {
             visibility: visible;
             opacity: 1;
-        }
+        }*/
     </style>
 </head>
 <body>
@@ -147,5 +142,6 @@
             </p>
         </section>
     </div>
+    <?php include __DIR__ . '/Includes/footer.php'; ?>
 </body>
 </html>

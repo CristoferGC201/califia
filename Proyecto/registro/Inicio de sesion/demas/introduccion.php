@@ -1,30 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Inicio - Educación Interactiva</title>
-    <link rel="stylesheet" href="inicio.css">
-</head>
+<?php include __DIR__ . '/Includes/header.php'; ?>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <img src="images/Califia.png" alt="logo">
-                </div>
-                <ul class="nav-links">
-                    <li><a href="inicio.html">Inicio</a></li>
-                    <li><a href="ciencia.html">Ciencias Naturales</a></li>
-                    <li><a href="literatura.html">Lenguaje</a></li>
-                    <li><a href="matematicas.html">Matematicas/Geometria</a></li>
-                    <li><a href="biologia.html">Biologia</a></li>
-                    <li><a href="iniciosesion.html" class="btn btn-primary">Iniciar Sesión</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
     <section class="hero">
         <div class="container">
             <h1>¿Qué es Califia?</h1>
@@ -59,11 +34,6 @@
             </div>
         </div>
     </section>
-
-    <footer>
-        <div class="container">
-            <p>© 2024 Calafia - Todos los derechos reservados</p>
-        </div>
-    </footer>
+    <?php include __DIR__ . '/Includes/footer.php'; ?>
 </body>
 </html>
