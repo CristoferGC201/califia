@@ -28,6 +28,12 @@
                 Francia, como el resto de Europa, jamás volvería a ser la misma tras estos eventos. Las repercusiones se sintieron tanto dentro como fuera de sus fronteras, y el ejemplo francés se convirtió en un faro para otros movimientos que buscaban desafiar el poder establecido.
             </p>
 
+                                     <!-- Botón de descarga del pdf-->
+                                     <div style="margin: 20px 0;">
+                <a href="downloads/026-la-revolucion-francesa.pdf" class="btn btn-primary" download style="padding: 5px 15px; font-size: 12px; background-color: #007bff; color: white; border-radius: 5px; text-decoration: none;">
+                    Descargar Revolucion Francesa (PDF)
+                </a>
+
             <h4>Videos Educativos sobre Revolución Francesa:</h4>
             <!-- Agregar los videos de manera accesible -->
             <section class="videos" style="margin-top: 40px; padding: 20px; background-color: #f9f9f9;">

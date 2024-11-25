@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['user_id'] = $id;
 
             // Redirigimos al usuario a la página Task_Manager.php
-            header('Location: demas\inicio.html');
+            header('Location: inicio.php');
             exit();
         } else {
             $error = "Contraseña incorrecta.";
@@ -100,6 +100,7 @@ $conn->close();
                 <!-- Botón para enviar el formulario. -->
                 <button type="submit">Entrar</button>
             </form>
+            <p>¿No tienes una cuenta? <a href="registro.php">Regístrate</a></p>
         </div>
 
         <footer>
