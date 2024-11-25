@@ -8,7 +8,7 @@
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Califia - Enciclopedia Educativa</title>
+    <title>Biología - Enciclopedia Educativa</title>
     <link rel="stylesheet" href="inicio.css"> <!-- Enlace al archivo CSS externo que contiene los estilos de la página -->
 
 </head>  
@@ -26,7 +26,6 @@
                     </a>
                 </div>
                 <ul class="nav-links">
-                    
                     <li><a href="index.php">Índice</a></li>
                     <li><a href="ciencia.php">Ciencias Naturales</a></li>
                     <li><a href="literatura.php">Lenguaje</a></li>
