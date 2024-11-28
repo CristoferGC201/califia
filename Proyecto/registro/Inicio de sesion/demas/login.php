@@ -65,8 +65,8 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión - Mi Enciclopedia</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlazamos un archivo CSS externo para dar estilo a la página -->
+    <title>Iniciar Sesión - Califia</title>
+    <link rel="stylesheet" href="nose.css">
 </head>
 <body>
     <div class="container">
@@ -77,27 +77,19 @@ $conn->close();
         <div class="login-box">
             <h2>Iniciar Sesión</h2>
             
-            <!-- Si existe la variable $error, mostramos el mensaje de error al usuario. -->
             <?php if (isset($error)): ?>
-            <div class="alert alert-warning"><?php echo $error; ?></div>
+            <div class="alert"><?php echo $error; ?></div>
             <?php endif; ?>            
-            
-            <!-- El formulario envía los datos a este mismo archivo usando el método POST. -->
+        
             <form action="login.php" method="POST">
-                
-                <!-- Campo para ingresar el nombre de usuario. El valor enviado será accesible a través de $_POST['username']. -->
                 <div class="input-group">
                     <label for="username">Nombre de usuario:</label>
                     <input type="text" id="username" name="username" required>
                 </div>
-                
-                <!-- Campo para ingresar la contraseña. El valor será accesible a través de $_POST['password']. -->
                 <div class="input-group">
                     <label for="password">Contraseña:</label>
                     <input type="password" id="password" name="password" required>
                 </div>
-                
-                <!-- Botón para enviar el formulario. -->
                 <button type="submit">Entrar</button>
             </form>
             <p>¿No tienes una cuenta? <a href="registro.php">Regístrate</a></p>

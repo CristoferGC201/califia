@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Registro</title>
-    <link rel="stylesheet" href="/califiaV2.0/Proyecto/registro/inicio de sesion/demas/estilos.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <div class="registro-contenedor">
