@@ -1,0 +1,185 @@
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #523535;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+.button img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+.button:hover {
+    background-color: #574949;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+
+header {
+    background-color: #e43636de;
+    color: white;
+    
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.menu li {
+    position: relative;
+    margin: 0;
+}
+.menu > li {
+    margin-right: 20px;
+}
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+.menu a:hover {
+    background-color: #f05252;
+}
+
+/* Submenús */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 70%; /* Muestra el submenú justo debajo del elemento padre */
+    left: 0;
+    background-color: #f05757;
+    min-width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+.submenu li {
+    margin: 0;
+}
+.submenu a {
+    color: white;
+    padding: 10px;
+    white-space: nowrap; /* Evita que los textos largos se dividan */
+}
+.submenu a:hover {
+    background-color: #979494;
+}
+
+/* Mostrar submenú al pasar el ratón */
+.menu li:hover > .submenu {
+    display: block;
+}
+
+
+.logo img {
+    height: 60px;
+    width: 60px;
+}
+
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.btn-primary {
+    background: #6bdfff;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #1dd1a1;
+    color: #fff;
+}
+
+.hero {
+    background: url('images/portada\ califia.png') no-repeat center center/cover;
+    color: #000000;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+   
+}
+
+.hero h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    background-color: #c2c2c295;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.features {
+    padding: 50px 0;
+    background: #f4f4f4;
+}
+
+.features h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.feature {
+    background: #fff;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}

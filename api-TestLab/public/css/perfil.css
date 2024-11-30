@@ -1,0 +1,230 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Para que ocupe toda la altura de la pantalla */
+    margin: 0;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.results-container {
+    text-align: center;
+    margin: auto;
+}
+
+.results-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center; /* Centra el contenido de las celdas */
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f05252;
+    color: white;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #fff;
+}
+
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+header {
+    background-color: #e43636de;
+    color: white;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.menu li {
+    position: relative;
+    margin: 0;
+}
+.menu > li {
+    margin-right: 20px;
+}
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+.menu a:hover {
+    background-color: #f05252;
+}
+
+/* Submenús */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Muestra el submenú justo debajo del elemento padre */
+    left: 0;
+    background-color: #f05757;
+    min-width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+.submenu li {
+    margin: 0;
+}
+.submenu a {
+    color: white;
+    padding: 10px;
+    white-space: nowrap; /* Evita que los textos largos se dividan */
+}
+.submenu a:hover {
+    background-color: #979494;
+}
+
+/* Mostrar submenú al pasar el ratón */
+.menu li:hover > .submenu {
+    display: block;
+}
+
+
+.logo img {
+    height: 60px;
+    width: 60px;
+}
+
+/* Reseteo de márgenes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura de la pantalla completa */
+    background-color: #f8f9fa; /* Fondo claro */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Contenedor Principal */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el contenedor */
+    border-radius: 8px;
+}
+
+/* Estilo del encabezado y menú */
+header {
+    width: 100%;
+    background-color: #e43636de;
+    color: white;
+    padding: 10px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #f05252;
+}
+
+/* Contenedor de resultados */
+.results-container {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f05252;
+    color: white;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #fff;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+}
