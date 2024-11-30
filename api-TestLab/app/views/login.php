@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Iniciar sesión y redirigir al perfil
                 session_start();
                 $_SESSION['usuario_id'] = $user['id'];
-                header("Location: /api-TestLab/app/views/perfilUsuario.php");
+                header("Location: http://localhost/califia/api-TestLab/app/views/perfilUsuario.php");
                 exit;
             } else {
                 $error = "Correo o contraseña incorrectos.";

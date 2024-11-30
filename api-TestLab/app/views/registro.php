@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['usuario_id'] = $conn->insert_id;
 
                 // Redirigir a la página de perfil de usuario
-                header("Location: usuarioPerfil.php");
+                header("Location: http://localhost/califia/api-TestLab/app/views/inicio.php");
                 exit();
             } else {
                 $error = "Error al registrar. Inténtalo de nuevo.";
