@@ -86,7 +86,7 @@ $conn->close();
                 <input type="password" id="contrasena" name="contrasena" required>
             </div>
             <div class="form-group">
-                <button type="submit">Iniciar Sesión</button>
+            <button type="submit" class="btn btn-danger">Iniciar Sesion</button>
             </div>
             <div class="options">
                 <a href="#">¿Olvidaste tu contraseña?</a><br>

@@ -113,7 +113,7 @@ $conn->close();
                 </select>
             </div>
             <div class="form-group">
-                <button type="submit">Registrarse</button>
+            <button type="submit" class="btn btn-danger">Registro</button>
             </div>
         </form>
     </div>
