@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz de Turismo - Destinos Turísticos Famosos</title>
-    <?php include 'includes/headerExamenes.php'; ?>
+    <?php include 'includes/header.php'; ?>
     <script src="http://localhost/califia/api-TestLab/public/js/geoExam.js" defer></script>
     <link rel="stylesheet" href="http://localhost/califia/api-TestLab/public/css/StyleQ.css">
 </head>

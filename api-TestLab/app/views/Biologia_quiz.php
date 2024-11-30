@@ -1,6 +1,6 @@
 
     <title>Quiz de Biología - Partes de una Célula</title>
-    <?php include 'includes/headerExamenes.php'; ?>
+    <?php include 'includes/header.php'; ?>
     <link rel="stylesheet" href="http://localhost/califia/api-TestLab/public/css/StyleQ.css">
     <script src="http://localhost/califia/api-TestLab/public/js/bioExam.js" defer></script>
    

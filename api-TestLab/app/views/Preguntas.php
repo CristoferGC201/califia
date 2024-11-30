@@ -1,43 +1,81 @@
 <?php
-// Conexión a la base de datos
-$conn = new mysqli('localhost', 'root', '', 'TestLab');
+session_start();
 
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+// Verificar si el usuario está autenticado
+if (!isset($_SESSION['usuario_id'])) {
+    header("Location: login.php");
+    exit;
 }
 
-// Manejar el envío del formulario
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = htmlspecialchars($_POST['username']);
-    $email = htmlspecialchars($_POST['email']);
-    $comment = htmlspecialchars($_POST['comment']);
+// Conexión a la base de datos
+$host = "localhost";
+$user = "root";
+$password = ""; // Cambiar según configuración
+$dbname = "TestLab";
 
-    // Validar que no haya campos vacíos
-    if (!empty($username) && !empty($email) && !empty($comment)) {
-        $stmt = $conn->prepare("INSERT INTO developer_questions (username, email, comment, created_at) VALUES (?, ?, ?, NOW())");
-        $stmt->bind_param("sss", $username, $email, $comment);
+$conn = new mysqli($host, $user, $password, $dbname);
 
-        if ($stmt->execute()) {
-            $success_message = "¡Gracias por tu comentario!";
-        } else {
-            $error_message = "Error al guardar tu comentario. Intenta de nuevo.";
+// Verificar conexión
+if ($conn->connect_error) {
+    die("Error de conexión: " . $conn->connect_error);
+}
+
+// Obtener información del usuario
+$usuario_id = $_SESSION['usuario_id'];
+$sql = "SELECT nombre, correo FROM usuarios WHERE id = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $usuario_id);
+$stmt->execute();
+$result = $stmt->get_result();
+$usuario = $result->fetch_assoc();
+
+// Obtener el nombre de usuario y el correo
+$username = $usuario['nombre'];
+$email = $usuario['correo'];
+
+// Comprobar si se ha enviado un comentario
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['comment'])) {
+    $comment = $_POST['comment'];
+    
+    // Validar que el comentario no esté vacío
+    if (!empty($comment)) {
+        // Preparar y ejecutar la consulta para insertar el comentario
+        $sql = "INSERT INTO developer_questions (username, email, comment) VALUES (?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        
+        if ($stmt === false) {
+            die("Error al preparar la consulta: " . $conn->error);
         }
 
-        $stmt->close();
+        $stmt->bind_param("sss", $username, $email, $comment);
+        
+        if ($stmt->execute()) {
+            $success_message = "Comentario enviado correctamente.";
+        } else {
+            $error_message = "Hubo un error al enviar el comentario.";
+        }
     } else {
-        $error_message = "Todos los campos son obligatorios.";
+        $error_message = "El comentario no puede estar vacío.";
     }
 }
 
-// Obtener todos los comentarios ordenados por fecha
-$comments = [];
-$result = $conn->query("SELECT username, email, comment, created_at FROM developer_questions ORDER BY created_at DESC");
+// Consulta para obtener las preguntas del usuario logueado
+$preguntas = [];
+$sql = "SELECT username, email, comment, created_at FROM developer_questions WHERE username = ? ORDER BY created_at DESC";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("s", $username);
+$stmt->execute();
+$result = $stmt->get_result();
+
+// Verificar si la consulta ha devuelto resultados
 if ($result->num_rows > 0) {
-    $comments = $result->fetch_all(MYSQLI_ASSOC);
+    $preguntas = $result->fetch_all(MYSQLI_ASSOC);
 }
 
+$stmt->close();
 $conn->close();
 ?>
+
 <?php include __DIR__ . '/includes/header.php'; ?>
 <link rel="stylesheet" href="http://localhost/califia/api-TestLab/public/css/stylesCursos.css">
 <!DOCTYPE html>
@@ -87,26 +125,21 @@ $conn->close();
     <?php endif; ?>
 
     <form action="" method="POST">
-        <label for="username">Nombre de Usuario:</label>
-        <input type="text" id="username" name="username" required><br><br>
+        <p><strong>Bienvenido, <?= htmlspecialchars($username) ?></strong></p>  <!-- Muestra el nombre de usuario -->
         
-        <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" required><br><br>
-
         <label for="comment">Comentario:</label>
         <textarea id="comment" name="comment" required></textarea><br><br>
 
         <button type="submit">Enviar</button>
     </form>
 
-    <h2>Comentarios:</h2>
-    <?php foreach ($comments as $comment): ?>
+    <h2>Mis Comentarios:</h2>
+    <?php foreach ($preguntas as $pregunta): ?>
         <div class="comment">
-            <strong><?= htmlspecialchars($comment['username']) ?></strong> 
-            <time><?= date("d-m-Y H:i:s", strtotime($comment['created_at'])) ?></time><br>
-            <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
+            <strong><?= htmlspecialchars($pregunta['username']) ?></strong> 
+            <time><?= date("d-m-Y H:i:s", strtotime($pregunta['created_at'])) ?></time><br>
+            <p><?= nl2br(htmlspecialchars($pregunta['comment'])) ?></p>
         </div>
     <?php endforeach; ?>
 </body>
 </html>
-

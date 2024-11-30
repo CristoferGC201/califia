@@ -1,11 +1,13 @@
-<?php include __DIR__ . '/includes/header.php'; ?>
+
     <link rel="stylesheet" href="http://localhost/califia/api-TestLab/public/css/stylesRegistro.css">
 
     <?php
+session_start(); // Iniciar sesión
+
 // Conexión a la base de datos
 $host = "localhost";
 $user = "root";
-$password = ""; // Cambiar según configuración
+$password = "";
 $dbname = "TestLab";
 
 $conn = new mysqli($host, $user, $password, $dbname);
@@ -28,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = "Por favor, completa todos los campos.";
     } else {
         // Buscar al usuario en la base de datos
-        $sql = "SELECT id, contrasena FROM usuarios WHERE correo = ?";
+        $sql = "SELECT id, correo, contrasena, nombre FROM usuarios WHERE correo = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("s", $correo);
         $stmt->execute();
@@ -39,10 +41,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Verificar la contraseña
             if (password_verify($contrasena, $user['contrasena'])) {
-                // Iniciar sesión y redirigir al perfil
-                session_start();
-                $_SESSION['usuario_id'] = $user['id'];
-                header("Location: http://localhost/califia/api-TestLab/app/views/perfilUsuario.php");
+                // Iniciar sesión y almacenar el nombre en lugar de "username"
+                $_SESSION['usuario_id'] = $user['id']; 
+                $_SESSION['nombre'] = $user['nombre']; // Guardar el nombre del usuario en la sesión
+                $_SESSION['correo'] = $user['correo']; // Guardar correo para mostrarlo en el perfil si es necesario
+
+                // Redirigir al index.php después de un inicio de sesión exitoso
+                header("Location: index.php");
                 exit;
             } else {
                 $error = "Correo o contraseña incorrectos.";
@@ -92,6 +97,3 @@ $conn->close();
     </div>
 </body>
 </html>
-
- <!-- PHP Footer -->
- <?php include __DIR__ . '/includes/footer.php'; ?>

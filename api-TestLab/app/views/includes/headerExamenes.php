@@ -1,3 +1,9 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start(); // Solo inicia la sesión si no está activa
+}
+?>
+
 <header>
         <nav>
         <link rel="stylesheet" href="/califia/api-TestLab/public/css/styles.css">

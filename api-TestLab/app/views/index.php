@@ -1,5 +1,17 @@
+<?php
+session_start(); // Iniciar sesión
+
+// Verificar si el usuario está autenticado
+if (!isset($_SESSION['usuario_id'])) {
+    header('Location: http://localhost/califia/api-TestLab/app/views/login.php'); // Redirigir al login si no está autenticado
+    exit();
+}
+
+?>
+
 <?php include __DIR__ . '/includes/header.php'; ?>
-    <link rel="stylesheet" href="http://localhost/califia/api-TestLab/public/css/index.css">
+
+<link rel="stylesheet" href="http://localhost/califia/api-TestLab/public/css/index.css">
 
 </head>
 <body>

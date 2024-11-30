@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz de Química - Tabla Periódica</title>
-    <?php include 'includes/headerExamenes.php'; ?>
+    <?php include 'includes/header.php'; ?>
     <link rel="stylesheet" href="http://localhost/califia/api-TestLab/public/css/StyleQ.css">
 </head>
 <body>
